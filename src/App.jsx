@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Modal1 from './components/Modal1/Modal1';
 import Modal2 from './components/Modal2/Modal2';
@@ -7,16 +7,25 @@ import Modal4 from './components/Modal4/Modal4';
 import StepperControl from './components/StepperControl';
 
 function App() {
+  const [savedFormData,setsavedFormData]=useState({});
   const [formData, setFormData] = useState({
     projectName: "",
     client: "",
     startDate: "",
     endDate: "",
-    selectedButton: "" // Adding selectedButton to formData state
+    selectedButton: ""
   });
 
+  useEffect(() => {
+    const savedFormData = localStorage.getItem('formData');
+    if (savedFormData) {
+      setFormData(JSON.parse(savedFormData));
+    }
+    setsavedFormData(JSON.parse(savedFormData));
+  }, []);
+
   const handleInputData = input => e => {
-    const { value } = e.target || e; // Ensure to handle the case where e.target is undefined
+    const { value } = e.target || e;
     setFormData(prevState => ({
       ...prevState,
       [input]: value
@@ -27,7 +36,6 @@ function App() {
 
   const nextModal = () => {
     if (currentModal === 2) {
-      // Ensure a button is selected before proceeding to the next modal
       if (!formData.selectedButton) {
         alert("Please select a view.");
         return;
@@ -42,12 +50,14 @@ function App() {
     } else if (!formData.endDate) {
       alert("Please select an end date.");
     } else {
+      // Update local storage before transitioning to the next step
+      localStorage.setItem('formData', JSON.stringify(formData));
       setCurrentModal(currentModal => currentModal + 1);
     }
   };
 
   const prevModal = () => {
-    if(currentModal<=1){
+    if(currentModal <= 1){
       return;
     }
     setCurrentModal(currentModal => currentModal - 1);
@@ -56,7 +66,7 @@ function App() {
   const renderModal = () => {
     switch (currentModal) {
       case 1:
-        return <Modal1 next={nextModal} values={formData} handleFormData={handleInputData} />;;
+        return <Modal1 next={nextModal} values={formData} handleFormData={handleInputData} savedFormData={savedFormData}/>;
       case 2:
         return <Modal2 handleButtonClick={handleButtonClick} activeButton={formData.selectedButton}/>;
       case 3:
@@ -68,7 +78,6 @@ function App() {
     }
   };
 
-  // Define handleButtonClick function
   const handleButtonClick = (buttonName) => {
     setFormData(prevState => ({
       ...prevState,

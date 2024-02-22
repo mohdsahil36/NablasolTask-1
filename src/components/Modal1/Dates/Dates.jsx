@@ -1,7 +1,7 @@
 import React from "react";
 import classes from './Dates.module.css';
 
-export default function Dates({startDate,endDate,handleFormData}) {
+export default function Dates({values,handleFormData,savedFormData}) {
   return (
     <>
       <div>
@@ -15,9 +15,9 @@ export default function Dates({startDate,endDate,handleFormData}) {
                 <input
                   type="date"
                   id="startDate"
-                  value={startDate}
                   onChange={(e) => handleFormData("startDate")(e)}
                   className={classes["start-date"]}
+                  value={savedFormData.startDate ? savedFormData.startDate:""}
                   required
                 />
               </div>
@@ -26,7 +26,7 @@ export default function Dates({startDate,endDate,handleFormData}) {
                 <input
                   type="date"
                   id="endDate"
-                  value={endDate}
+                  value={savedFormData.endDate ? savedFormData.endDate:""}
                   onChange={(e) => handleFormData("endDate")(e)}
                   className={classes["end-date"]}
                   required

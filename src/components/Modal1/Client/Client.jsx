@@ -2,7 +2,7 @@ import React from "react";
 import { Plus } from 'lucide-react';
 import classes from './Client.module.css';
 
-export default function Client({client,handleFormData}) {
+export default function Client({client,handleFormData,savedFormData}) {
   return (
     <>
       <div className={classes.client}>
@@ -14,7 +14,7 @@ export default function Client({client,handleFormData}) {
             <select
               id="client"
               className={classes["client-select"]}
-              value={client}
+              value={savedFormData.client ? savedFormData.client:"" }
               onChange={(e) => handleFormData("client")(e)}
               required
               placeholder=" Select an option"

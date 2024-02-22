@@ -1,7 +1,8 @@
 import React from "react";
 import classes from './ProjectName.module.css';
 
-export default function ProjectName({projectName,handleFormData}) {
+export default function ProjectName({projectName,handleFormData,savedFormData}) {
+  console.log(savedFormData.projectName);
   return (
     <>
       <h3 className={classes["modal1-heading"]}>Create a project</h3>
@@ -13,7 +14,7 @@ export default function ProjectName({projectName,handleFormData}) {
           type="text"
           id="projectName"
           placeholder="Enter project name"
-          value={projectName}
+          value={savedFormData.projectName ? savedFormData.projectName : ''}
           onChange={(e) => handleFormData("projectName")(e)}
           required
         />

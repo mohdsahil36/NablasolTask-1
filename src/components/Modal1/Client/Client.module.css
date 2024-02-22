@@ -31,11 +31,6 @@
     .clientOptions{
         justify-content: flex-start;
     }
-    /* .or-text{
-        color: grey;
-        margin:0 0.5rem;
-        font-weight: 600;
-    } */
 }
 .client-options{
     width: 60%;
