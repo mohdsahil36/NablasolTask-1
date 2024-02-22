@@ -1,0 +1,36 @@
+.list-option{
+    border: 1px solid grey;
+    padding: 1.5rem;
+    text-align: center;
+    color: grey;
+    border-radius: 5px;
+    background: transparent;
+}
+@media screen and (min-width:767px) {
+    .list-option{
+        height: 10rem;
+        width: 10rem;
+    }
+}
+.icon{
+    height: 3rem;
+    width: 3rem;
+}
+@media screen and (min-width:767px) {
+    .icon{
+        height: 4rem;
+        width: 4rem;
+    }
+}
+.type{
+    font-size: 0.75rem;
+    color: grey;
+}
+@media screen and (min-width:767px) {
+    .type{
+        font-size: 1rem;
+    }
+}
+.highlight {
+    border: 2px solid blue;
+}

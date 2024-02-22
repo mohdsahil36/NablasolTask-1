@@ -1,0 +1,10 @@
+.tasksHeading{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+@media (min-width: 767px) {
+    .tasksHeading {
+      font-size: 1.25rem;
+    }
+}

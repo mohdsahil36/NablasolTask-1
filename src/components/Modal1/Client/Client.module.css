@@ -1,0 +1,84 @@
+
+.client{
+    margin-top: 0.5rem;
+}
+.clientLabel{
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+@media screen and (min-width:767px) {
+    .clientLabel{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .clientLabel{
+        font-size: 1.25rem;
+    }
+}
+.or-text{
+    color: grey;
+    margin:0 0.5rem;
+}
+.clientOptions{
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (min-width:767px) {
+    .clientOptions{
+        justify-content: flex-start;
+    }
+    /* .or-text{
+        color: grey;
+        margin:0 0.5rem;
+        font-weight: 600;
+    } */
+}
+.client-options{
+    width: 60%;
+}
+.clientOptions select{
+    border-radius: 4px;
+    padding: 0.325rem;
+    border: 1px solid grey;
+    color: grey;
+    width: 100%;
+    font-size: 0.80rem;
+}
+@media screen and (min-width:767px) {
+    .clientOptions select{
+        justify-content: flex-start;
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .clientOptions select{
+        font-size: 1.25rem;
+    }
+}
+.clientOptions button{
+    border: 1px solid grey;
+    font-size: 0.80rem;
+    padding: 0.325rem;
+    border-radius: 4px;
+    background: transparent;
+    color: grey;
+}
+@media screen and (min-width:767px) {
+    .clientOptions button{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .clientOptions button{
+        font-size: 1.25rem;
+    }
+}
+.plus-icon{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.25rem;
+}

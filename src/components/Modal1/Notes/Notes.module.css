@@ -1,0 +1,30 @@
+.notes-label{
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+@media screen and (min-width:767px) {
+    .notes-label{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .notes-label{
+        font-size: 1.25rem;
+    }
+}
+.opt-textArea{
+    font-size: 0.75rem;
+    padding: 0.45rem;
+    border-radius: 4px;
+}
+@media screen and (min-width:767px) {
+    .opt-textArea{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .opt-textArea{
+        font-size: 1.25rem;
+    }
+}

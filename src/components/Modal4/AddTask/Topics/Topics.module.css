@@ -1,0 +1,55 @@
+.topics{
+    margin-top: 1.75rem;
+}
+.topics-list{
+    list-style-type: none;
+    padding-left: 0;
+}
+.list-element{
+    padding: 0.5rem 0;
+    border-bottom: 0.65px solid rgb(208, 204, 204);
+}
+.list-topics{
+    display: flex;
+    justify-content: space-between;
+}
+.topics-box{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+input[type=checkbox]{
+    height: 1rem;
+    width: 1rem;
+}
+.topic-value{
+    font-size: 0.80rem;
+}
+@media screen and (min-width:767px){
+    .topic-value{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px){
+    .topic-value{
+        font-size: 1.25rem;
+    }
+}
+.cancel-button{
+    border: none;
+    background-color: transparent;
+}
+.cancel-button:hover{
+    background-color: rgb(235, 231, 231);
+    border-radius: 3px;
+}
+.cancel-icon{
+    height: 0.75rem;
+    width: 0.75rem;
+}
+@media screen and (min-width:767px){
+    .cancel-icon{
+        height: 1rem;
+        width: 1rem;
+    }
+}

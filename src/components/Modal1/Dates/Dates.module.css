@@ -1,0 +1,45 @@
+.dates-title{
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+}
+@media screen and (min-width:767px) {
+    .dates-title{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .dates-title{
+        font-size: 1.25rem;
+    }
+}
+.select-dates{
+    margin-top: 0.75rem;
+}
+.start-date,.end-date{
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 0.80rem;
+    color: grey;
+    padding: 0.4rem 1.125rem;
+}
+@media screen and (min-width:767px) {
+    .dates-title,.start-date,.end-date{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1024px) {
+    .dates-title,.start-date,.end-date{
+        font-size: 1.25rem;
+    }
+}
+.dates{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (min-width:767px) {
+    .dates{
+        justify-content: flex-start;
+    }
+}
